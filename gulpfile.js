@@ -55,7 +55,7 @@ gulp.task('images', function () {
   return gulp.src('./assets/*')
     .pipe(imagemin([
       imagemin.jpegtran({progressive: true}),
-      imagemin.optipng({optimizationLevel: 7}),
+      imagemin.optipng({optimizationLevel: 10}),
       imagemin.svgo({
         plugins: [
           {removeViewBox: true},
@@ -63,7 +63,7 @@ gulp.task('images', function () {
         ]
       }),
       imageminWebp({
-        quality: 50
+        quality: 25
       })
     ]))
     .pipe(gulp.dest('./docs/assets/'));

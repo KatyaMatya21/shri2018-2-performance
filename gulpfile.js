@@ -8,11 +8,13 @@ var autoprefixer = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
 var babel = require("gulp-babel");
 var del = require('del');
+var inlinesource = require('gulp-inline-source');
 
 gulp.task('html', function () {
   return gulp.src('./index.html')
     //.pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('./docs'));
+    .pipe(inlinesource())
+    .pipe(gulp.dest('./docs'))
 });
 
 gulp.task('fonts', function () {
@@ -63,4 +65,4 @@ gulp.task('clean', function () {
   return del(['docs/**/*']);
 });
 
-gulp.task('default', gulpSequence('clean', ['html', 'css', 'js', 'images', 'fonts', 'json']));
+gulp.task('default', gulpSequence('clean', 'css', ['js', 'images', 'fonts', 'json', 'html']));

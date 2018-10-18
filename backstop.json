@@ -3,8 +3,8 @@
   "viewports": [
     {
       "label": "tablet",
-      "width": 1024,
-      "height": 768
+      "width": 2000,
+      "height": 1500
     }
   ],
   "scenarios": [

@@ -756,35 +756,6 @@ textarea,
   margin-left: 0;
 }
 
-@media (max-width: 767px) {
-  div.subnav .nav > li:first-child > a,
-  div.subnav .nav > li + li > a {
-    border-color: transparent;
-  }
-  div.subnav .nav > li:first-child > a:hover,
-  div.subnav .nav > li + li > a:hover {
-    background-color: #cfd9db;
-  }
-  div.subnav .nav > li:last-child > a {
-    border-radius: 0 0 4px 4px;
-  }
-  .input-append .add-on,
-  .input-prepend .add-on,
-  .input-append .btn,
-  .input-prepend .btn {
-    padding: 5px;
-  }
-}
-
-@media (max-width: 979px) {
-  .navbar .nav-collapse .nav > li > a {
-    color: #ffffff;
-  }
-  .navbar .nav-collapse .nav > li > a:hover {
-    background-color: #18bc9c;
-  }
-}
-
 .main__greeting {
   font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

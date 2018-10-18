@@ -52,14 +52,16 @@ gulp.task('images', function () {
   return gulp.src('./assets/*')
     .pipe(imagemin([
       imagemin.jpegtran({progressive: true}),
-      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.optipng({optimizationLevel: 7}),
       imagemin.svgo({
         plugins: [
           {removeViewBox: true},
           {cleanupIDs: false}
         ]
       }),
-      imageminWebp({})
+      imageminWebp({
+        quality: 50
+      })
     ]))
     .pipe(gulp.dest('./docs/assets/'));
 });

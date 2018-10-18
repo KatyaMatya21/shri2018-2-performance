@@ -189,9 +189,7 @@
         <div class="filter__select">
           <button class="filter__select-button" type="button">
             <span class="button__text">Все</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6">
-              <path d="M10.3 0L5.5 4.7.7 0 0 .7 5.5 6 11 .7z"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6"><path d="M10.3 0L5.5 4.7.7 0 0 .7 5.5 6 11 .7z"/></svg>
           </button>
           <div class="filter__select-popup" aria-hidden="true">
             <div class="filter__select-menu">
@@ -366,27 +364,7 @@
       <div class="modal__status">Включено</div>
       <div class="knob__wrapper">
         <div class="knob">
-          <svg viewBox="-110 -110 220 220" id="foobar">
-            <filter id="knob-shadow">
-              <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
-              <feOffset dx="2" dy="0" result="offsetblur"/>
-              <feFlood flood-color="rgba(134,121,71,0.45)"/>
-              <feComposite in2="offsetblur" operator="in"/>
-              <feMerge>
-                <feMergeNode/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
-            <g class="knob-container">
-              <circle class="knob_center" cx="0" cy="0"/>
-              <circle class="knob__indicator-bg" r="110" cx="0" cy="0"/>
-              <circle class="knob__indicator" r="100" cx="0" cy="0"/>
-              <circle class="knob__indicator-mask" r="100" cx="0" cy="0"/>
-              <circle class="knob__indicator-bounds" r="100" cx="0" cy="0"/>
-              <circle class="knob__self" r="89" cx="0" cy="0"/>
-              <polygon class="knob__arrow" points="-90,0 -85,5 -85,-5"/>
-            </g>
-          </svg>
+          <svg viewBox="-110 -110 220 220" id="foobar"><filter id="knob-shadow"><feGaussianBlur in="SourceAlpha" stdDeviation="2"/><feOffset dx="2" result="offsetblur"/><feFlood flood-color="rgba(134,121,71,0.45)"/><feComposite in2="offsetblur" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter><g class="knob-container"><circle class="knob_center"/><circle class="knob__indicator-bg" r="110"/><circle class="knob__indicator" r="100"/><circle class="knob__indicator-mask" r="100"/><circle class="knob__indicator-bounds" r="100"/><circle class="knob__self" r="89"/><path class="knob__arrow" d="M-90 0l5 5V-5z"/></g></svg>
           <div class="knob__value">+23</div>
         </div>
       </div>

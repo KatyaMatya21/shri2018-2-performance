@@ -11,7 +11,7 @@ var del = require('del');
 
 gulp.task('html', function () {
   return gulp.src('./index.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    //.pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('./docs'));
 });
 

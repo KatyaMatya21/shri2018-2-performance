@@ -302,10 +302,13 @@
   width: 108px;
   height: 27px;
   position: relative;
-  background-image: url("./assets/logo_small.png");
+  background-image: url("./assets/logo.png");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
+}
+.webp .logo {
+  background-image: url("./assets/logo.webp");
 }
 .logo__ya {
   display: block;

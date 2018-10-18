@@ -10,6 +10,7 @@ var babel = require("gulp-babel");
 var del = require('del');
 var inlinesource = require('gulp-inline-source');
 var fontmin = require('gulp-fontmin');
+const imageminWebp = require('imagemin-webp');
 
 gulp.task('html', function () {
   return gulp.src('./index.html')
@@ -57,7 +58,8 @@ gulp.task('images', function () {
           {removeViewBox: true},
           {cleanupIDs: false}
         ]
-      })
+      }),
+      imageminWebp({})
     ]))
     .pipe(gulp.dest('./docs/assets/'));
 });

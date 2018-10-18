@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_Homepage_0_document_0_tablet.png",
-        "test": "../bitmaps_test/20181019-011005/backstop_default_Homepage_0_document_0_tablet.png",
+        "test": "../bitmaps_test/20181019-011859/backstop_default_Homepage_0_document_0_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_Homepage_0_document_0_tablet.png",
         "label": "Homepage",
@@ -20,7 +20,8 @@ report({
             "width": 0,
             "height": 0
           },
-          "misMatchPercentage": "0.00"
+          "misMatchPercentage": "0.00",
+          "analysisTime": 134
         }
       },
       "status": "pass"

@@ -24700,3 +24700,26 @@ selectOptions.forEach(o => {
 document.querySelector('.menu__icon').addEventListener('click', function () {
   document.querySelector('.menu').classList.toggle('menu_open');
 });
+
+function WebpIsSupported(callback) {
+  if (!window.createImageBitmap) {
+    callback(!1);
+    return
+  }
+  var webpdata = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA=';
+  fetch(webpdata).then(function (response) {
+    return response.blob()
+  }).then(function (blob) {
+    createImageBitmap(blob).then(function () {
+      callback(!0)
+    }, function () {
+      callback(!1)
+    })
+  })
+}
+
+WebpIsSupported(function (isSupported) {
+  if (isSupported) {
+    document.querySelector('.page').classList.add('webp')
+  }
+});

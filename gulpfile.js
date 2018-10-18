@@ -9,6 +9,7 @@ var rename = require('gulp-rename');
 var babel = require("gulp-babel");
 var del = require('del');
 var inlinesource = require('gulp-inline-source');
+var fontmin = require('gulp-fontmin');
 
 gulp.task('html', function () {
   return gulp.src('./index.html')

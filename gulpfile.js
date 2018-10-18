@@ -50,13 +50,13 @@ gulp.task('images', function () {
   return gulp.src('./assets/*')
     .pipe(imagemin([
       imagemin.jpegtran({progressive: true}),
-      imagemin.optipng({optimizationLevel: 5})//,
-      /*imagemin.svgo({
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.svgo({
         plugins: [
           {removeViewBox: true},
           {cleanupIDs: false}
         ]
-      })*/
+      })
     ]))
     .pipe(gulp.dest('./docs/assets/'));
 });

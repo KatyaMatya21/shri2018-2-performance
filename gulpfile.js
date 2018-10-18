@@ -69,8 +69,13 @@ gulp.task('images', function () {
     .pipe(gulp.dest('./docs/assets/'));
 });
 
+gulp.task('what', function() {
+  return gulp.src('./favicon.png')
+    .pipe(gulp.dest('./docs/'));
+});
+
 gulp.task('clean', function () {
   return del(['docs/**/*']);
 });
 
-gulp.task('default', gulpSequence('clean', 'css', ['js', 'images', 'fonts', 'json', 'html']));
+gulp.task('default', gulpSequence('clean', 'css', 'what', ['js', 'images', 'fonts', 'json', 'html']));

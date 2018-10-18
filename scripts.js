@@ -24603,7 +24603,7 @@ const TEMPS = {
   'cold': 0,
   'warm': 23,
   'hot': 30
-};
+}
 
 document.querySelectorAll('.modal__filter-item_temp').forEach(l => {
   l.onclick = function() {
@@ -24615,7 +24615,7 @@ document.querySelectorAll('.modal__filter-item_temp').forEach(l => {
 const showModal = function(selector) {
   document.querySelector(selector).classList.toggle('modal_open', true);
   document.querySelector('body').style.overflow = 'hidden';
-};
+}
 
 document.querySelectorAll('.panel_temp').forEach(p => {
   p.onclick = function() {
@@ -24678,6 +24678,12 @@ const popup = document.querySelector('.filter__select-popup');
 
 selectButton.addEventListener('click', function() {
   popup.classList.toggle('filter__select-popup_open');
+});
+
+let widths = '';
+window.addEventListener('scroll', function() {
+    widths += document.querySelectorAll('body')[0].offsetWidth;
+    document.querySelector('.stats').innerHTML = widths;
 });
 
 selectOptions.forEach(o => {

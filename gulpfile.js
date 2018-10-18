@@ -9,7 +9,6 @@ var rename = require('gulp-rename');
 var babel = require("gulp-babel");
 var del = require('del');
 var inlinesource = require('gulp-inline-source');
-var fontmin = require('gulp-fontmin');
 const imageminWebp = require('imagemin-webp');
 
 gulp.task('html', function () {

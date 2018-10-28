@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'PT Sans';
+  font-display: swap;
+  src: url('./fonts/pts55f_w.eot');
+  src: local('PT Sans'), url('./fonts/PTS55F_W.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: bold;
+  src: url('./fonts/pts75f_w.eot');
+  src: local('PT Sans Bold'), url('./fonts/PTS75F_W.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-display: swap;
+  font-weight: bold;
+  src: url('./fonts/ptn77f_w.eot');
+  src: local('PT Sans Narrow Bold'), url('./fonts/PTN77F_W.woff') format('woff');
+}
+
 .adjust-bar {
   -webkit-appearance: none;
   appearance: none;
@@ -730,4 +754,8 @@ input,
 textarea,
 .uneditable-input {
   margin-left: 0;
+}
+
+.main__greeting {
+  font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

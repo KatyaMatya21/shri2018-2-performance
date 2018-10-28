@@ -107,7 +107,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('push', function() {
-  return gulp.src('./docs/*')
+  return gulp.src('./docs/**/*')
     .pipe(git.add())
     .pipe(git.commit('Automated commit'))
     .pipe(git.push('origin', function (err) {

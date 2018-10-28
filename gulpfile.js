@@ -107,12 +107,13 @@ gulp.task('clean', function () {
 });
 
 gulp.task('push', function() {
-  return gulp.src('./docs/**/*')
+  gulp.src('./docs/**/*')
     .pipe(git.add())
-    .pipe(git.commit('Automated commit'))
-    .pipe(git.push('origin', function (err) {
+    .pipe(git.commit('Automated commit'));
+
+  return git.push('origin', function (err) {
       if (err) throw err;
-    }));
+    });
 });
 
 gulp.task('default', gulpSequence('clean', 'css', 'what', ['js', 'images', 'fonts', 'json', 'html']));

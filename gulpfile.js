@@ -11,6 +11,7 @@ var del = require('del');
 var inlinesource = require('gulp-inline-source');
 const imageminWebp = require('imagemin-webp');
 var fontmin = require('gulp-fontmin');
+var git = require('gulp-git');
 
 function minifyFont(text, cb) {
   gulp
@@ -103,6 +104,15 @@ gulp.task('what', function() {
 
 gulp.task('clean', function () {
   return del(['docs/**/*']);
+});
+
+gulp.task('push', function() {
+  return gulp.src('./docs/*')
+    .pipe(git.add())
+    .pipe(git.commit('Automated commit'))
+    .pipe(git.push('origin', function (err) {
+      if (err) throw err;
+    }));
 });
 
 gulp.task('default', gulpSequence('clean', 'css', 'what', ['js', 'images', 'fonts', 'json', 'html']));

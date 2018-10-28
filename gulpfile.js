@@ -10,6 +10,17 @@ var babel = require("gulp-babel");
 var del = require('del');
 var inlinesource = require('gulp-inline-source');
 const imageminWebp = require('imagemin-webp');
+var fontmin = require('gulp-fontmin');
+
+function minifyFont(text, cb) {
+  gulp
+    .src('./fonts/*.woff')
+    .pipe(fontmin({
+      hinting: false,
+      text: text
+    }))
+    .pipe(gulp.dest('docs/fonts'));
+}
 
 gulp.task('html', function () {
   return gulp.src('./index.html')
@@ -22,8 +33,25 @@ gulp.task('html', function () {
 });
 
 gulp.task('fonts', function () {
-  return gulp.src('./fonts/*')
+  return gulp.src('./fonts/*.woff')
+    .pipe(fontmin({
+      hinting: false,
+      text: '',
+    }))
     .pipe(gulp.dest('./docs/fonts'));
+
+  /*var buffers = [];
+
+  gulp
+    .src('./index.html')
+    .on('data', function(file) {
+      buffers.push(file.contents);
+    })
+    .on('end', function() {
+      var text = Buffer.concat(buffers).toString('utf-8');
+      minifyFont(text);
+    });*/
+
 });
 
 gulp.task('css', function () {
